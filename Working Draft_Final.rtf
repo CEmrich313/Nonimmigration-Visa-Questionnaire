@@ -1,0 +1,282 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2706
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww18700\viewh21200\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Title: Non-Immigration Visa Application Questionnaire\
+Description: A prototype QnA demonstrating the workflow of various visa application processes.\
+Before: <center><h2>Nonimmigration Visa Application Questionnaire</h2></center>\
+\
+Q(1): This is an application that will help you figure out if you are able to get certain travel visas to enter the United States of America.  This app can help you with the various J-1 visa categories, B-1 and B-2 Visas, as well as the F and M Visas. We will not collect personal data from this questionnaire.  If you need additional help, please contact an attorney or visit an embassy. GOTO:2\
+Q(2): Would you like to continue? \
+A: Yes\
+	Q(2.1): Processing...GOTO:3\
+A: No\
+	Q(2.2): Take Care! \
+Q(3): What visa would you like to look into?\
+A: J-1\
+<br><br>The J-1 visa is a student/professional visa used for many purposes.\
+	Q(3.1): Is this an academic position or a professional position?\
+	A: Academic \
+		Q(3.1.1): Which program/category are you participating in?\
+		A: Intern\
+			Q(3.1.1.1): Great, I will now ask you a few questions to determine if you are eligible. First, are you a current college or university student?\
+			A: Yes\
+				Q(3.1.1.1.1): Have you already been accepted for an internship position in the United States?\
+				A: Yes\
+					Q(3.1.1.1.1.1): Congratulation! you are likely eligible to continue with the J-1 Internship Visa! \
+					A: Start Over\
+						Q(3.1.1.1.1.1.1): GOTO:3\
+					A: Exit\
+						Q(3.1.1.1.1.1.2): GOTO:5\
+				A: No\
+					Q(3.1.1.1.1.2): You likely will not be eligible for the visa until you have accepted an offer of an internship in the United States.  \
+					A: Start Over\
+						Q(3.1.1.1.1.2.1): GOTO:3\
+					A: Exit\
+						Q(3.1.1.1.1.2.2):GOTO:5\
+			A: No\
+		A: Professor/Research Scholar\
+			Q(3.1.1.2): Are you a candidate for, or currently on a tenure track?\
+			A: Yes\
+				Q(3.1.1.2.1): This probably disqualifies you from the J-1 Visa. Go back to the start to try a different visa.\
+				A: Start Over \
+					Q(3.1.1.2.1.1):GOTO:2.1\
+					\
+				A: Exit\
+					Q(3.1.1.2.1.2):GOTO:5\
+			A: No\
+				Q(3.1.1.2.2): Great, have you completed a professor program in the last 2 years (12 months)?\
+				A: Yes\
+					Q(3.1.1.2.2.1): This may disqualify you from the J-1 Visa.  Please try a different visa or contact an embassy or attorney.\
+					A: Start Over\
+						Q(3.1.1.2.2.1.1): GOTO:2.1\
+					A: Exit\
+						Q(3.1.1.2.2.1.2):GOTO:5\
+				A: No\
+					Q(3.1.1.2.2.2): Okay, almost finished. In the last year (12 months) have you participated in a J-1 visa program?\
+					A: Yes\
+					A: No\
+						Q(3.1.1.2.2.2.2): Excellent! It looks like you are eligible for the J-1 Visa! \
+<br><br>The next steps are to fill out the DS-160 form.  Good luck!\
+						A: Start Over\
+							Q(3.1.1.2.2.2.2.1): GOTO:2.1\
+						A: Exit\
+							Q(3.1.1.2.2.2.2.2):GOTO:5\
+		A: Short-Term Scholar\
+			Q(3.1.1.3): Are you a current professor or research scholar?\
+			A: Yes\
+				Q(3.1.1.3.1): Amazing! You are likely eligible for this category of the J-1 Visa! Please complete the DS-160 form and check the proper government websites for more information.\
+				A: Start Over\
+					Q(3.1.1.3.1.1): GOTO:3\
+				A: Exit\
+					Q(3.1.1.3.1.2):GOTO:5\
+			A: No\
+\
+		A: Student\
+			Q(3.1.1.4): What type of school are you planning to attend?\
+			A: High School\
+				Q(3.1.1.4.1): When the program begins, will you be between 15 and 18 years and 6 months old?\
+				A: Yes\
+					Q(3.1.1.4.1.1): Great! Have you participated in a secondary school/academic program where you have received a J-1 or F-1 visa before?\
+					A: Yes\
+						Q(3.1.1.4.1.1.1): This may not allow you to get the J-1 visa. You should contact an attorney for more support. Good luck!\
+						A: Start Over\
+							Q(3.1.1.4.1.1.1.1): GOTO:3\
+						A: Exit\
+							Q(3.1.1.4.1.1.1.2):GOTO:5\
+					A: No\
+						Q(3.1.1.4.1.1.2): Great, have you finished more than 11 years of school in total, by the time you start this program? <br><br> This number does not include Kindergarten. The 11 years will start with 1st grade  and counts the current year in school.\
+						A: I have completed less than 11 years of school\
+							Q(3.1.1.4.1.1.2.1): Excellent! You likely can successfuly apply for a J-1 Visa! Fill out the DS-160 form as the next step in the process. Good Luck!\
+							A: Start Over\
+								Q(3.1.1.4.1.1.2.1.1): GOTO:3\
+							A: Exit\
+								Q(3.1.1.4.1.1.2.1.2):GOTO:5\
+						A: I have completed more than 11 years of school\
+							Q(3.1.1.4.1.1.2.2): This probably means you cannot participate in the program with a J-1 visa. Try a different program or contact a professional! Good Luck!\
+							A: Start Over\
+								Q(3.1.1.4.1.1.2.2.1): GOTO:3\
+							A: Exit\
+								Q(3.1.1.4.1.1.2.2.2):GOTO:5\
+				A: No\
+					Q(3.1.1.4.1.2): For this visa, students must be between the ages listed above. Please seek additional assistance with an attorney or embassy for more help.\
+					A: Start Over\
+						Q(3.1.1.4.1.2.1): GOTO:3\
+					A: Exit\
+						Q(3.1.1.4.1.2.2):GOTO:5\
+\
+			A: College or University\
+				Q(3.1.1.4.2): Is the majority of your funding (51% or more) coming from a source other than your family? <br><br> This could mean the U.S Government is funding this process. Or it could mean an international organization is providing substantial scholarship money.\
+				A: Yes\
+					Q(3.1.1.4.2.1): Great, do you plan to earn credit through a college or University in your home country, through this program? <br><br> This means that you are earning a degree in a country other than the United States.  The program will earn you credits towards that degree.\
+					A: Yes, I will be earning credits for this program\
+						Q(3.1.1.4.2.1.1): Great, you are likely eligible for the J-1 Visa! Fill out the DS-160 form online to continue the process! GOTO:2.1\
+					A: No this is a non-degree program\
+						Q(3.1.1.4.2.1.2): will the program last longer than 2 years (24 months)?\
+						A: Yes\
+							Q(3.1.1.4.2.1.2.1): This may make you ineligible for the J-1 visa. Contact a professional for more information.\
+						A: No\
+							Q(3.1.1.4.2.1.2.2): Your responses indicate you are likely eligible for a J-1 Visa! Complete the DS-160 form to proceed with the process. Good Luck!\
+							A: Start Over\
+								Q(3.1.1.4.2.1.2.2.1): \
+							A: Exit\
+								Q(3.1.1.4.2.1.2.2.2):GOTO:5\
+				A: No\
+					Q(3.1.1.4.2.2): For the J-1 Visa, you this is a requirement.  You could look into the F-1 visa, or you could reach out to an attorney or embassy.  \
+					A: Start Over\
+						Q(3.1.1.4.2.2.1): GOTO:3\
+					A: Exit\
+						Q(3.1.1.4.2.2.2):GOTO:5\
+	A: Professional\
+		Q(3.1.2): There are a number of different types of J-1 Visas. This application can help with a limited number of programs/categories. Which program/category are you participating in?\
+		A: Government Visitor\
+			Q(3.1.2.1): Have you been selected by a U.S Federal, state, or local government agency to come to the United States?\
+			A: Yes\
+				Q(3.1.2.1.1): Great, will you be going on tours or discussions, consultations, meeting, conferences or workshops while in the United States?\
+				A: Yes\
+					Q(3.1.2.1.1.1): Great, the last question may be a little personal. I won't keep any of this data, so don't be modest here.  The J-1 Visa requires you to be some sort of influential or distinguished person. Does that describe you?\
+					A: Yes, I am distinguished and influential\
+						Q(3.1.2.1.1.1.1): Of course you are! It seems like you are likely eligible for the J-1 Visa! File the DS-160 form to proceed with the next steps. Good Luck!\
+						A: Start Over\
+							Q(3.1.2.1.1.1.1.1): GOTO:3\
+						A: Exit\
+					A: No\
+						Q(3.1.2.1.1.1.2): Try a different type of visa or contact someone at the embassy for more information!\
+						A: Start Over\
+							Q(3.1.2.1.1.1.2.1): GOTO:3\
+						A: Exit\
+							Q(3.1.2.1.1.1.2.2):GOTO:5\
+				A: No\
+					Q(3.1.2.1.1.2): Alright, this is the type of activity there J-1 covers for this type of visit. Please reach out to an attorney or visit can embassy for more information.\
+					A: Start Over\
+						Q(3.1.2.1.1.2.1): GOTO:3\
+					A: Exit\
+						Q(3.1.2.1.1.2.2):GOTO:5\
+			A: No\
+				Q(3.1.2.1.2): To be eligible for the J-1 Visa for this category, a member of the US government as described above needs to select you for the trip. Please contact a professional for more information!\
+				A: Start Over\
+					Q(3.1.2.1.2.1): GOTO:3\
+				A: Exit\
+		A: International Visitor\
+			Q(3.1.2.2): First, I will ask if you have been selected by the Department of State to come to the United States?\
+			A: Yes, I have been asked by the U.S Department of State to come to the United States.\
+				Q(3.1.2.2.1): Great, Are you a recognized leader, or potential leader in a field of special knowledge? <br><br> Don't be modest, be honest!\
+				A: Yes, I am a distinguished leader in my field\
+					Q(3.1.2.2.1.1): Great! Last question, are you currently or will you be doing consultation, observation, research, training or demonstrating a special skill while you are here?\
+					A: Yes\
+						Q(3.1.2.2.1.1.1): Congratulations, it looks like you will be eligible for the J-1 Visa in this category. I would file the DS-160 form and reach out to a professional or an embassy for further assistance! Take care!!\
+						A: Start Over\
+							Q(3.1.2.2.1.1.1.1): GOTO:3\
+						A: Exit\
+							Q(3.1.2.2.1.1.1.2):GOTO:5\
+					A: No\
+						Q(3.1.2.2.1.1.2): Okay. I would look fort a different visa program then. Good Luck! \
+						A: Start Over\
+							Q(3.1.2.2.1.1.2.1): GOTO:3\
+						A: Exit\
+							Q(3.1.2.2.1.1.2.2):GOTO:5\
+				A: No, I would not consider myself a distinguished or potential leader (yet)\
+					Q(3.1.2.2.1.2): Okay, I would look for a different type of visa. Good Luck!\
+					A: Start Over\
+						Q(3.1.2.2.1.2.1):GOTO:2.1\
+					A: Exit\
+						Q(3.1.2.2.1.2.2):GOTO:5\
+			A: No, I was asked by another organization.\
+				Q(3.1.2.2.2): This category of the J-1 visa requires you to have been asked by the D.O.S. Try a different type of Visa or contact someone from an attorney's office or embassy. \
+				A: Start Over\
+					Q(3.1.2.2.2.1):GOTO:2.1\
+				A: Exit\
+					Q(3.1.2.2.2.2):GOTO:5\
+	\
+\
+A: B-1/B-2\
+<br><br>The B is mainly a business or a vacation travel visa.\
+	Q(3.2): You have selected the B-1/B-2 Category. This type of visa is generally for people looking to travel for to the United States for tourism or business or a combination of the two.  Does this sound like the type of visa you need?\
+	A: Yes\
+		Q(3.2.1): Great, let's continue. Are you planning on doing business (consultation, contract negotiation, attend a conference, for example) or tourism (vacation, medical treatments, visiting friends etc)?\
+		A: Business\
+			Q(3.2.1.1): Do you plan on doing any of the following activities? (Study, Seek employment, arrive as a crew member on a ship or aircraft or work in the foreign press?\
+			A: Yes\
+				Q(3.2.1.1.1): You are likely not eligible for this visa. Would you like to start over?\
+				A: Start Over\
+					Q(3.2.1.1.1.1): GOTO:3\
+				A: Exit\
+					Q(3.2.1.1.1.2):GOTO:5\
+			A: No\
+				Q(3.2.1.1.2): Perfect, it seems you are likely eligible for the B-1 Visa! Complete the online DS-160 Form to proceed with the next steps. Good Luck! GOTO:2.1\
+				\
+		A: Tourism\
+			Q(3.2.1.2): The B-2 category allows for many types of non-business related actives in the United States. Things like, vacations, visiting friends/family, medical treatments, music or sports activities all are included in this visa. Does this sound like what you will be doing?\
+			A: Yes, I will be doing some sort of tourist activity while here\
+				Q(3.2.1.2.1): Great, it seems like you are likely eligible for the B-2 Visa! Continue on with the next steps by filling out the DS-160 form online.  Good Luck!\
+				A: Start Over\
+					Q(3.2.1.2.1.1):GOTO:2.1\
+				A: Exit\
+					Q(3.2.1.2.1.2):GOTO:5\
+			A: No I will be doing something different than tourism.\
+				Q(3.2.1.2.2): Okay, you should start over and look for a different visa. Thank you! GOTO:2.1\
+		A: A mixture of both\
+			Q(3.2.1.3): Do you plan on doing any of the following activities? (Study, Seek employment, arrive as a crew member on a ship or aircraft or work in the foreign press?\
+			A: Yes\
+				Q(3.2.1.3.1): These activities are not allowed while holding the B-1/2 visas. You should look for a different visa. Good Luck!\
+				A: Start Over\
+					Q(3.2.1.3.1.1):GOTO:2.1\
+				A: Exit\
+					Q(3.2.1.3.1.2):GOTO:5\
+			A: No\
+				Q(3.2.1.3.2): Great, because of the activities you want to do while in the United States, you should likely get a B-1 and B-2 visa.  Fill out the DS-160 form to proceed with the application. Congratulations! \
+				A: Start Over\
+					Q(3.2.1.3.2.1):GOTO:2.1\
+				A: Exit\
+					Q(3.2.1.3.2.2):GOTO:5\
+		A: None of the above\
+			Q(3.2.1.4): Would you like to start over?\
+			A: Start Over\
+				Q(3.2.1.4.1):GOTO:2.1\
+			A: Exit\
+				Q(3.2.1.4.2):GOTO:5\
+		\
+	A: No\
+		Q(3.2.2): Hmm, okay, let's go back to the start and try a different type of visa. \
+A: F <br><br>The F visa is for students who are not primarily being funded by a government or academic institution. \
+	Q(3.3): The F-1 is a student visa required to study in the United States.  Does this sound like the visa you need?\
+	A: Yes\
+		Q(3.3.1): Which type of course/area of study best fits your program?\
+		A: College or University\
+			Q(3.3.1.1): Great, you likely are eligible for the F-1 Visa! Complete the DS-160 form to continue the process!\
+		A: High School\
+			Q(3.3.1.2): Great, you likely are eligible for the F-1 Visa! Complete the DS-160 form to continue the process!\
+		A: Private Elementary\
+			Q(3.3.1.3): Great, you likely are eligible for the F-1 Visa! Complete the DS-160 form to continue the process!\
+		A: Seminary\
+			Q(3.3.1.4): Great, you likely are eligible for the F-1 Visa! Complete the DS-160 form to continue the process!\
+		A: Conservatory\
+			Q(3.3.1.5): Great, you likely are eligible for the F-1 Visa! Complete the DS-160 form to continue the process!\
+		A: Another academic institution\
+			Q(3.3.1.6): Great, you likely are eligible for the F-1 Visa! Complete the DS-160 form to continue the process!\
+		A: Vocational or non-academic institution\
+			Q(3.3.1.7): This answer indicates you may be seeking an M-1 Visa. Please try again. GOTO:3\
+	A: No\
+		Q(3.3.2):GOTO:2.1\
+A: M\
+<br><br>The M visa is for students in non-academic programs or internships.\
+	Q(3.4): The M-1 visa is a type of student visa for non-academic institutions.  It is able to be used for anything other than a language training program. Does this sound like the kind of program you signed up for?\
+	A: Yes\
+		Q(3.4.1): Great, you are likely eligible for this visa.  You should complete the DS-160 form to continue the process. Good Luck! \
+	A: No\
+		Q(3.4.2): You should start over and see what Visa you might be eligible for. GOTO:3\
+A: I'm not sure \
+	Q(3.5): This feature is currently in beta testing. Come back soon!\
+	A: Start Over\
+		Q(3.5.1): GOTO:2.1\
+	A: Exit\
+		Q(3.5.2):GOTO:5\
+	A: Something special\
+		Q(3.5.3): Click Here for easy access to the Journal Entries I wrote throughout the semester on various legal technology related topics. <a href="https://docs.google.com/document/d/1WzQCygqv2t8hMY7rw73XGguAUp_2OcZ7rExXBOwnT5k/edit?usp=sharing">https://docs.google.com/document/d/1WzQCygqv2t8hMY7rw73XGguAUp_2OcZ7rExXBOwnT5k/edit?usp=sharing</a>\
+Q(4):Take Care! \
+Q(5):Take Care!GOTO:6\
+Q(6):For More information, please click this link... <a href="https://travel.state.gov/content/travel/en/us-visas/study.html">https://travel.state.gov/content/travel/en/us-visas/study.html</a>\
+}
